@@ -1,16 +1,44 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 15px;
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url('../images/WallpaperDesktop.png');
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    font-size: 1.2em;
     width: 100%;
     max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px;
+    text-shadow: 0 0 10px #fff, 
+    0 0 20px #fff, 0 0 30px #fff, 
+    0 0 40px #ff00de, 0 0 70px #ff00de, 
+    0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .card {
     aspect-ratio: 3/4;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 5px;
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
