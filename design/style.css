@@ -1,15 +1,47 @@
-#memoria {
-    max-width: 30rem;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-#memoria img {
-    margin-bottom: 20px;
-    border: thin solid black;
-    width: 80px;
-    height: 80px;
-    border-radius: 15px;
+.card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
 }
 
-#memoria #base {
-    text-align: center;
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid darkred;
+    transition: all 400ms ease;
+}
+
+.frente {
+    transform: rotateY(180deg);
+}
+
+.atras {
+    background-image: url('../images/faceback.png');
+    backface-visibility: hidden;
+}
+
+.revelar-card {
+    transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
+
 }
