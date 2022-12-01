@@ -1,4 +1,6 @@
 const grid = document.querySelector('.grid');
+const spanJogador = document.querySelector('.jogador');
+const timer = document.querySelector('.timer');
 
 const personagens = [
     'constantine',
@@ -26,8 +28,8 @@ const endGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
 
   if (disabledCards.length === 20) {
-    
-    alert('Parabéns!');
+    clearInterval(this.loop);
+    alert(`Parabéns, ${spanJogador.innerHTML}! Seu tempo foi: ${timer.innerHTML} segundos!`);
   }
 }
 
@@ -110,4 +112,19 @@ const loadGame = () => {
     });
 }
 
-loadGame();
+const cronometro = () => {
+  
+  setInterval(() => {
+    
+    const currentTime = timer.innerHTML;
+    timer.innerHTML = currentTime + 1;
+
+  }, 1000)
+}
+
+window.onload = () => {
+  spanJogador.innerHTML = localStorage.getItem('jogador');
+
+  loadGame();
+}
+
