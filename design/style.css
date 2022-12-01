@@ -2,7 +2,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url('../images/WallpaperDesktop.png');
+    background-image: url('../images/WallpaperDesktopII.png');
     min-width: 100px;
     align-items: center;
     justify-content: center;
@@ -42,6 +42,7 @@ header {
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
+    background-color: #ccc;
 }
 
 .face {

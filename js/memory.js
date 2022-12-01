@@ -28,8 +28,8 @@ const endGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
 
   if (disabledCards.length === 20) {
-    clearInterval(this.loop);
-    alert(`Parabéns, ${spanJogador.innerHTML}! Seu tempo foi: ${timer.innerHTML} segundos!`);
+    clearInterval(this.tempo);
+    window.alert(`Parabéns, ${spanJogador.innerHTML}! Seu tempo foi: ${timer.innerHTML} segundos!`);
   }
 }
 
@@ -112,19 +112,18 @@ const loadGame = () => {
     });
 }
 
-const cronometro = () => {
-  
-  setInterval(() => {
-    
-    const currentTime = timer.innerHTML;
-    timer.innerHTML = currentTime + 1;
+const startTimer = () => {
 
-  }, 1000)
+  this.tempo = setInterval(() => {
+    const currentTime = +timer.innerHTML;
+    timer.innerHTML = currentTime + 1;
+  }, 1000);
+
 }
 
 window.onload = () => {
   spanJogador.innerHTML = localStorage.getItem('jogador');
-
+  startTimer();
   loadGame();
 }
 
