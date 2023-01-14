@@ -23,9 +23,9 @@ Aprender mais sobre JavaScript e funções matemáticas dentro do código
 
 Apresentação do projeto em vídeo: em breve!
 
-#### 🚀 Deploy
+## 🚀 Deploy
 
-
+https://marcoscast.github.io/memory-game/
 
 ## 👨‍💻 Área do Desenvolvedor
 
