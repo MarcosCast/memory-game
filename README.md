@@ -13,7 +13,7 @@ A parte responsiva do projeto está funcional em alguns aparelhos
 
 # Dificuldades
 
-A parte mais complicada foi transformar o projeto totalmente responsivo, ele ainda apresenta problemas de dimensão em alguns aparelhos.
+Fazer com que o o jogo continuasse depois que você achasse o primeiro par, mas consegui resolver refazendo o trecho do código.
 
 # Aprendizados
 
